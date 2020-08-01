@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Admino</title>
+</head>
+
+<body>
+
+
+
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">Admino</a>
+      <button class="navbar-toggler" data-target="#Ndiv" data-toggle="collapse">
+        <i class="navbar-toggler-icon"></i></button>
+      <div class="collapse navbar-collapse" id="Ndiv">
+        <ul class="navbar-nav">
+          <li class="nav-item px-2"><a class="nav-link" href="index.html">Dashboard</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="posts.html">Posts</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="categories.html">Categories</a></li>
+          <li class="nav-item px-2"><a class="nav-link" href="users.html">Users</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mr-3 dropdown"><a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+              <i class="fas fa-user"></i> Welcome Algo </a>
+            <div class="dropdown-menu">
+              <a href="profile.html" class="dropdown-item">
+                <i class="fas fa-user-circle"></i>Profile</a>
+              <a href="settings.html" class="dropdown-item">
+                <i class="fas fa-cog"></i> Settings</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"><i class="fas fa-user-times"></i> Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container p-2" id="dash">
+      <h1><i class="fas fa-cog"></i> Settings</h1>
+    </div>
+  </header>
+
+  <section id="buts" class="bg-light my-3">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3">
+          <a class="btn bg-light btn-block" data-toggle="modal" data-target="#addp"><i class="fas fa-arrow-left"></i>
+            Back To Dashboard</a>
+        </div>
+        <div class="col-md-3 text-white">
+          <a class="btn btn-success w-100" data-toggle="modal" data-target="#addc"><i class="fas fa-check"></i> Save
+            Changes</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="posts">
+    <div class="container mb-5">
+      <div class="card">
+        <div class="card-header">
+          <h4>Edit Settings</h4>
+        </div>
+        <div class="card-body">
+          <div class="form-group ml-3">
+            <legend>Allow User Registration</legend>
+            <input type="radio" class="form-check-input" value="Yes" checked name="w"> Yes
+            <br>
+            <input type="radio" class="form-check-input" value="No" name="w"> No
+          </div>
+          <div class="form-group ml-3">
+            <legend>Homepage Format</legend>
+            <input type="radio" class="form-check-input" checked name="q"> Blog Page
+            <br>
+            <input type="radio" class="form-check-input" name="q"> Homepage
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="text-center bg-dark py-5 text-white">
+    <p class="lead">Copyright &copy; <span id="year"></span> Admino</p>
+  </footer>
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+    CKEDITOR.replace('editor1');
+  </script>
+</body>
+
+</html>
